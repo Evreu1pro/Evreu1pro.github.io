@@ -1,0 +1,4 @@
+﻿User-agent: *
+Allow: /
+Sitemap: https://evreu1pro.github.io/sitemap.xml
+
