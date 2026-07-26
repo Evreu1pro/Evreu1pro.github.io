@@ -1,76 +1,272 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Evreu1pro — AI Web Developer · Python · TypeScript · Leipzig | GitHub</title>
-  <meta name="description" content="Evreu1pro — AI-assisted developer in Leipzig. Featured: Translogistik (logistics brand site), EchoPrint-AI, parameter-golf. Python, TypeScript, Vercel." />
-  <meta name="keywords" content="Evreu1pro, GitHub, AI developer, Python, TypeScript, JavaScript, HTML, CSS, Vercel, Leipzig, open source, web developer, Translogistik, EchoPrint AI, logistics website Germany" />
+  <title>Evreu1pro — Portfolio · Translogistik · EchoPrint-AI · Leipzig</title>
+  <meta name="description" content="Evreu1pro portfolio. Flagship: Translogistik — multi-page logistics brand site (DE). Also EchoPrint-AI, parameter-golf. Python, TypeScript, Vercel. Leipzig, Germany." />
+  <meta name="keywords" content="Evreu1pro, Translogistik, portfolio, logistics website Germany, EchoPrint AI, parameter-golf, GitHub, Vercel, Leipzig developer, design tokens, vanilla JS" />
   <meta name="author" content="Evreu1pro" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://evreu1pro.github.io/" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Evreu1pro — AI Web Developer | GitHub" />
-  <meta property="og:description" content="Open-source builder from Leipzig: Translogistik, EchoPrint-AI, logistics sites, parameter-golf. Python, TypeScript, Vercel." />
+  <meta property="og:title" content="Evreu1pro — Translogistik &amp; open-source portfolio" />
+  <meta property="og:description" content="Flagship project Translogistik + EchoPrint-AI lab + HYDRA parameter-golf. Web engineer from Leipzig." />
   <meta property="og:url" content="https://evreu1pro.github.io/" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Evreu1pro","url":"https://evreu1pro.github.io/","sameAs":["https://github.com/Evreu1pro","https://github.com/Evreu1pro/translogistik","https://translogistik.vercel.app","https://github.com/Evreu1pro/EchoPrint-AI","https://echo-print-ai.vercel.app"],"jobTitle":"AI-assisted Web Developer","address":{"@type":"PostalAddress","addressLocality":"Leipzig","addressCountry":"DE"},"knowsAbout":["Python","TypeScript","JavaScript","HTML","CSS","Vercel","Open Source","AI-assisted development","Logistics web","Design systems"]}
+  {"@context":"https://schema.org","@type":"Person","name":"Evreu1pro","url":"https://evreu1pro.github.io/","sameAs":["https://github.com/Evreu1pro","https://github.com/Evreu1pro/translogistik","https://translogistik.vercel.app","https://github.com/Evreu1pro/EchoPrint-AI","https://echo-print-ai.vercel.app"],"jobTitle":"Web Engineer","address":{"@type":"PostalAddress","addressLocality":"Leipzig","addressCountry":"DE"},"knowsAbout":["Python","TypeScript","JavaScript","HTML","CSS","Vercel","Design systems","Logistics web"]}
   </script>
   <style>
-    :root { color-scheme: dark; --bg:#0b0f19; --card:#121826; --text:#e8eefc; --muted:#9aa8c7; --acc:#a855f7; --line:#243049; }
+    :root {
+      color-scheme: dark;
+      --bg: #070a12;
+      --card: rgba(18, 24, 38, 0.85);
+      --text: #eef2ff;
+      --muted: #9aa8c7;
+      --acc: #a855f7;
+      --acc2: #22d3ee;
+      --line: #243049;
+      --flag: linear-gradient(135deg, rgba(124,58,237,.35), rgba(34,211,238,.12));
+    }
     * { box-sizing: border-box; }
-    body { margin:0; font-family: ui-sans-serif, system-ui, sans-serif; background: radial-gradient(1200px 600px at 20% -10%, #2a1650 0%, transparent 50%), var(--bg); color: var(--text); line-height: 1.55; }
-    main { max-width: 820px; margin: 0 auto; padding: 48px 20px 80px; }
-    h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin: 0 0 8px; }
-    .tag { color: var(--acc); font-weight: 600; }
-    p { color: var(--muted); }
-    .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; margin: 18px 0; }
-    ul { color: var(--muted); }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif;
+      background:
+        radial-gradient(900px 480px at 12% -8%, #3b1d6e 0%, transparent 55%),
+        radial-gradient(700px 400px at 90% 10%, #0e3a4a 0%, transparent 50%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    main { max-width: 900px; margin: 0 auto; padding: 48px 20px 88px; }
+    h1 { font-size: clamp(2rem, 5vw, 2.75rem); margin: 0 0 10px; letter-spacing: -0.03em; }
+    h2 { font-size: 1.25rem; margin: 36px 0 14px; letter-spacing: -0.02em; }
+    .tag { color: var(--acc); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; }
+    p { color: var(--muted); margin: 0 0 12px; }
     a { color: #c4b5fd; }
-    .btn { display: inline-block; margin: 8px 8px 0 0; padding: 12px 16px; border-radius: 12px; background: linear-gradient(135deg, #7c3aed, #a855f7); color: white !important; text-decoration: none; font-weight: 600; }
-    .btn.secondary { background: transparent; border: 1px solid var(--line); color: var(--text) !important; }
-    .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-    .proj { border: 1px solid var(--line); border-radius: 12px; padding: 14px; background: #0e1422; }
-    footer { margin-top: 36px; color: #6b7a99; font-size: 0.9rem; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+      margin: 18px 0;
+      backdrop-filter: blur(10px);
+    }
+    .btn {
+      display: inline-block;
+      margin: 8px 8px 0 0;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #7c3aed, #a855f7);
+      color: #fff !important;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .btn.secondary {
+      background: transparent;
+      border: 1px solid var(--line);
+      color: var(--text) !important;
+    }
+    .btn.ghost-cyan {
+      background: transparent;
+      border: 1px solid rgba(34,211,238,.45);
+      color: #a5f3fc !important;
+    }
+    .grid {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .proj {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      background: #0e1422;
+      transition: border-color .15s ease, transform .15s ease;
+    }
+    .proj:hover { border-color: #3d4f72; transform: translateY(-2px); }
+    .proj strong { display: block; margin-bottom: 6px; font-size: 1.05rem; }
+    .proj .desc { color: var(--muted); font-size: 0.92rem; display: block; margin-bottom: 10px; }
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(168,85,247,.2);
+      color: #e9d5ff;
+      margin-bottom: 10px;
+    }
+    /* Flagship Translogistik */
+    .flagship {
+      background: var(--flag);
+      border: 1px solid rgba(168,85,247,.45);
+      border-radius: 20px;
+      padding: 24px;
+      margin: 20px 0 8px;
+      position: relative;
+      overflow: hidden;
+    }
+    .flagship::before {
+      content: "";
+      position: absolute;
+      width: 220px; height: 220px;
+      right: -40px; top: -60px;
+      background: radial-gradient(circle, rgba(34,211,238,.25), transparent 70%);
+      pointer-events: none;
+    }
+    .flagship h2 { margin: 0 0 8px; font-size: 1.55rem; }
+    .flagship .kicker {
+      color: var(--acc2);
+      font-weight: 800;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0 4px;
+    }
+    .chip {
+      font-size: 0.75rem;
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      background: rgba(0,0,0,.25);
+    }
+    footer { margin-top: 40px; color: #6b7a99; font-size: 0.9rem; }
+    .links a { margin-right: 10px; }
   </style>
 </head>
 <body>
   <main>
     <p class="tag">Leipzig · Germany · Open Source</p>
     <h1>Evreu1pro</h1>
-    <p><strong style="color:var(--text)">AI-assisted web developer</strong> — Python, TypeScript, HTML, CSS, JavaScript, Vercel. Building and improving real projects with AI.</p>
+    <p><strong style="color:var(--text)">Web engineer &amp; open-source builder</strong> — Python, TypeScript, HTML/CSS/JS, Vercel. Shipping real DE business sites + ML side quests.</p>
     <p>
-      <a class="btn" href="https://github.com/Evreu1pro">Open GitHub profile</a>
-      <a class="btn secondary" href="https://translogistik.vercel.app">Translogistik live</a>
-      <a class="btn secondary" href="https://echo-print-ai.vercel.app">EchoPrint AI demo</a>
-      <a class="btn secondary" href="https://github.com/Evreu1pro?tab=repositories">Repositories</a>
+      <a class="btn" href="https://github.com/Evreu1pro">GitHub profile</a>
+      <a class="btn ghost-cyan" href="https://translogistik.vercel.app">★ Translogistik live</a>
+      <a class="btn secondary" href="https://github.com/Evreu1pro/translogistik">Translogistik repo</a>
+      <a class="btn secondary" href="https://echo-print-ai.vercel.app">EchoPrint demo</a>
     </p>
+
+    <!-- FLAGSHIP: Translogistik as primary project -->
+    <section class="flagship" id="translogistik" aria-label="Flagship project Translogistik">
+      <div class="kicker">Flagship project · Showcase #1</div>
+      <h2>Translogistik</h2>
+      <p style="color:var(--text); max-width: 52ch;">
+        Multi-page logistics brand site for kitchen <strong>transport &amp; assembly</strong> across Germany.
+        Design tokens as single source of truth, interactive DE map, scroll-linked route motion, zero-build stack that still feels premium.
+      </p>
+      <div class="meta-row">
+        <span class="chip">HTML / CSS / Vanilla JS</span>
+        <span class="chip">Design tokens</span>
+        <span class="chip">Interactive map</span>
+        <span class="chip">Vercel</span>
+        <span class="chip">Portfolio showcase</span>
+      </div>
+      <p style="margin-top:16px">
+        <a class="btn" href="https://translogistik.vercel.app">Open live site</a>
+        <a class="btn secondary" href="https://github.com/Evreu1pro/translogistik">Star on GitHub</a>
+        <a class="btn secondary" href="https://github.com/Evreu1pro/translogistik/discussions/1">Show &amp; tell</a>
+      </p>
+    </section>
+
     <div class="card">
-      <h2 style="margin-top:0;color:var(--text)">About · Обо мне · Über mich</h2>
-      <p><strong>EN:</strong> I build web apps, business sites, and Python experiments. Focus: AI-assisted development, clean frontends, shipping on Vercel.</p>
-      <p><strong>RU:</strong> Создаю веб-приложения, бизнес-сайты и Python-эксперименты. Фокус: работа с ИИ, чистый фронтенд, деплой на Vercel.</p>
-      <p><strong>DE:</strong> Ich baue Web-Apps, Business-Websites und Python-Experimente. Fokus: KI-gestützte Entwicklung, sauberes Frontend, Deploy auf Vercel.</p>
+      <h2 style="margin-top:0">About · Обо мне · Über mich</h2>
+      <p><strong>EN:</strong> I build web apps and business sites for the German market, plus Python / tiny-LM experiments. AI helps me move; product decisions and polish are mine.</p>
+      <p><strong>RU:</strong> Делаю веб и бизнес-сайты под DE-рынок + Python / tiny-LM эксперименты. ИИ ускоряет — решения и вкус мои.</p>
+      <p><strong>DE:</strong> Web-Apps und Business-Sites für den DE-Markt, plus Python / Tiny-LM-Experimente. KI beschleunigt — Produktentscheidungen und Feinschliff bleiben bei mir.</p>
     </div>
-    <h2 style="color:var(--text)">Featured projects</h2>
+
+    <h2>All featured projects</h2>
     <div class="grid">
-      <div class="proj"><strong>Translogistik</strong><br/><span style="color:var(--muted)">Multi-page brand site · kitchen transport &amp; assembly · design tokens · DE map · motion</span><br/><a href="https://github.com/Evreu1pro/translogistik">GitHub</a> · <a href="https://translogistik.vercel.app">Live</a></div>
-      <div class="proj"><strong>EchoPrint-AI</strong><br/><span style="color:var(--muted)">Fingerprint &amp; exposure lab · M1–M5 + M7 AdTech · stable_id · local history</span><br/><a href="https://github.com/Evreu1pro/EchoPrint-AI">GitHub</a> · <a href="https://echo-print-ai.vercel.app">Live</a></div>
-      <div class="proj"><strong>parameter-golf</strong><br/><span style="color:var(--muted)">HYDRA · tiny LM ≤16MB / 10min · ~1.061 BPB</span><br/><a href="https://github.com/Evreu1pro/parameter-golf">GitHub</a> · <a href="https://evreu1pro.github.io/parameter-golf/">Writeup</a></div>
-      <div class="proj"><strong>vieth-logistik.de</strong><br/><span style="color:var(--muted)">HTML/CSS/JS · Germany logistics landing</span><br/><a href="https://github.com/Evreu1pro/vieth-logistik.de">GitHub</a> · <a href="https://vieth-logistik-de.vercel.app">Live</a></div>
-      <div class="proj"><strong>bhs-</strong><br/><span style="color:var(--muted)">Vite · industrial career landing</span><br/><a href="https://github.com/Evreu1pro/bhs-">GitHub</a> · <a href="https://bhs-chi.vercel.app">Live</a></div>
-      <div class="proj"><strong>Franz-Vieth-Logistik-v2</strong><br/><span style="color:var(--muted)">Logistics concept · DE market</span><br/><a href="https://github.com/Evreu1pro/Franz-Vieth-Logistik-v2">GitHub</a> · <a href="https://franz-vieth-logistik-v2.vercel.app">Live</a></div>
+      <article class="proj" id="project-translogistik">
+        <span class="badge">Flagship</span>
+        <strong>Translogistik</strong>
+        <span class="desc">Kitchen logistics brand · tokens · DE map · motion · multi-page</span>
+        <div class="links">
+          <a href="https://github.com/Evreu1pro/translogistik">GitHub</a>
+          <a href="https://translogistik.vercel.app">Live</a>
+        </div>
+      </article>
+      <article class="proj">
+        <span class="badge" style="background:rgba(34,211,238,.15);color:#a5f3fc">Lab</span>
+        <strong>EchoPrint-AI</strong>
+        <span class="desc">Fingerprint &amp; exposure lab · M1–M5 + M7 AdTech · local history</span>
+        <div class="links">
+          <a href="https://github.com/Evreu1pro/EchoPrint-AI">GitHub</a>
+          <a href="https://echo-print-ai.vercel.app">Live</a>
+        </div>
+      </article>
+      <article class="proj">
+        <span class="badge" style="background:rgba(251,191,36,.12);color:#fde68a">ML</span>
+        <strong>parameter-golf</strong>
+        <span class="desc">HYDRA · tiny LM ≤16MB / 10min · ~1.061 BPB verified</span>
+        <div class="links">
+          <a href="https://github.com/Evreu1pro/parameter-golf">GitHub</a>
+          <a href="https://evreu1pro.github.io/parameter-golf/">Writeup</a>
+        </div>
+      </article>
+      <article class="proj">
+        <strong>vieth-logistik.de</strong>
+        <span class="desc">HTML/CSS/JS · Germany logistics landing</span>
+        <div class="links">
+          <a href="https://github.com/Evreu1pro/vieth-logistik.de">GitHub</a>
+          <a href="https://vieth-logistik-de.vercel.app">Live</a>
+        </div>
+      </article>
+      <article class="proj">
+        <strong>bhs-</strong>
+        <span class="desc">Vite · industrial career landing</span>
+        <div class="links">
+          <a href="https://github.com/Evreu1pro/bhs-">GitHub</a>
+          <a href="https://bhs-chi.vercel.app">Live</a>
+        </div>
+      </article>
+      <article class="proj">
+        <strong>Franz-Vieth-Logistik-v2</strong>
+        <span class="desc">Logistics concept site · DE market</span>
+        <div class="links">
+          <a href="https://github.com/Evreu1pro/Franz-Vieth-Logistik-v2">GitHub</a>
+          <a href="https://franz-vieth-logistik-v2.vercel.app">Live</a>
+        </div>
+      </article>
     </div>
-    <h2 style="color:var(--text)">Tech stack keywords</h2>
-    <p>Python developer, TypeScript developer, JavaScript, HTML5, CSS3, Vercel deploy, open source GitHub Leipzig, AI-assisted coding, business websites Germany, Translogistik, logistics brand sites, design tokens, vanilla JS.</p>
-    <h2 style="color:var(--text)">Official links</h2>
-    <ul>
-      <li>GitHub profile: <a href="https://github.com/Evreu1pro">https://github.com/Evreu1pro</a></li>
-      <li>Translogistik: <a href="https://translogistik.vercel.app">https://translogistik.vercel.app</a> · <a href="https://github.com/Evreu1pro/translogistik">repo</a></li>
-      <li>Repositories: <a href="https://github.com/Evreu1pro?tab=repositories">https://github.com/Evreu1pro?tab=repositories</a></li>
+
+    <h2>On GitHub right now</h2>
+    <div class="card">
+      <p style="color:var(--text);margin:0">
+        Pin <strong>Translogistik</strong> first on the profile so visitors see it immediately.
+        Star / feedback welcome on the flagship — honest takes beat empty ⭐.
+      </p>
+      <p style="margin-top:12px">
+        Profile: <a href="https://github.com/Evreu1pro">github.com/Evreu1pro</a> ·
+        Flagship: <a href="https://github.com/Evreu1pro/translogistik">github.com/Evreu1pro/translogistik</a>
+      </p>
+    </div>
+
+    <h2>Tech keywords</h2>
+    <p>Python · TypeScript · JavaScript · HTML5 · CSS3 · Vercel · design tokens · vanilla JS · logistics websites Germany · open source Leipzig · AI-assisted development · Translogistik</p>
+
+    <h2>Official links</h2>
+    <ul style="color:var(--muted)">
+      <li>GitHub: <a href="https://github.com/Evreu1pro">https://github.com/Evreu1pro</a></li>
+      <li>Translogistik live: <a href="https://translogistik.vercel.app">https://translogistik.vercel.app</a></li>
+      <li>Translogistik repo: <a href="https://github.com/Evreu1pro/translogistik">https://github.com/Evreu1pro/translogistik</a></li>
+      <li>EchoPrint: <a href="https://echo-print-ai.vercel.app">https://echo-print-ai.vercel.app</a></li>
       <li>Location: Leipzig, Germany</li>
     </ul>
-    <footer>© 2026 Evreu1pro · SEO landing for the official GitHub profile · <a href="https://github.com/Evreu1pro">github.com/Evreu1pro</a></footer>
+
+    <footer>© 2026 Evreu1pro · Portfolio for GitHub discovery · Flagship: Translogistik</footer>
   </main>
 </body>
 </html>
